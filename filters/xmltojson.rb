@@ -16,13 +16,6 @@ class LogStash::Filters::XMLtoJSON < LogStash::Filters::Base
   config_name "xmltojson"
   plugin_status "beta"
 
-  # The string to split on. This is usually a line terminator, but can be any
-  # string.
-  # Modifying this to have it split on "&"
-  # config :terminator, :validate => :string, :default => "&"
-
-
-  # The field which value is split by the terminator, default @fields.rest
   config :outfield, :validate => :string, :default => "jsonraw"
   config :infield, :validate => :string, :default => "@message"
 
